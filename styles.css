@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.battle-container {
+    margin-top: 50px;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-around;
+    height: 50vh;
+    width: 50vw;
+    background-color: black;
+}
+
+
+.skill{
+    height: 40px;
+    width: 40px;
+    background-color: red;
+    transition: .2s ease;
+    position: relative;
+}
+
+.skill:hover{
+    background-color: brown;
+    transform: scale(1.1);
+    cursor: pointer ;
+}
+
+.skill:hover.skill::after{
+    opacity: 1;
+}
+
+.skill::after{
+    content: "EAE";
+    width: 2rem;
+    background-color: white;
+    position: absolute;
+    bottom: -2rem;
+    left: 50%;
+    transform: translate(-50%);
+    opacity: 0;
+    transition: .2s ease;
+}
+
+.hero-icon {
+    font-size: 2em;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.hero-icon:hover {
+    transform: scale(1.2);
+}
+
+.htmlHero{
+    width: 4rem;
+    height: 4rem;
+    background-color: aqua ;
+
+}
